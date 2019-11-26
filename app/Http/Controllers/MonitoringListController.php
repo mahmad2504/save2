@@ -32,7 +32,7 @@ class MonitoringListController extends Controller
 		$cursor = $this->db->$monitoringlist_id->find([],$projection);
 		$list = $cursor->toArray();
 		//dd($list[0]);
-		return view('monitorlist',compact('list'));
+		return view('monitorlist',compact('list','monitoringlist_id'));
 		
 	}
 	public function Sync($monitoringlist_id)

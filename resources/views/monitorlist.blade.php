@@ -129,7 +129,12 @@ $(document).ready(function()
 		{
 			//e - the click event object
 			//row - row component
+			data = row.getData();
+			console.log(data.id);
 			console.log("Click");
+			url = "/cvelist/show/{{$monitoringlist_id}}/"+data.id;
+			
+			window.open(url); 
 		},
 		initialSort:[
 			{column:"last_update", dir:"desc"}, //sort by this first
